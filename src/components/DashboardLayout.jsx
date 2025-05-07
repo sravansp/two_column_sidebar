@@ -43,7 +43,7 @@ const DashboardLayout = ({ children }) => {
       />
 
       {/* Main Content Area */}
-      <div className={`${sidebarOpen ? "ml-52" : ""} transition-[margin] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] relative flex flex-col flex-1 overflow-hidden`}>
+      <div className={`${sidebarOpen ? "ml-60" : ""} transition-[margin] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] relative flex flex-col flex-1 overflow-hidden`}>
         {/* Top Navbar */}
         <Navbar toggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
 

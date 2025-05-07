@@ -98,16 +98,12 @@ const Sidebar = ({ isOpen, toggleSidebar, isMobile }) => {
 
         {/* Bottom Actions */}
         <div className="">
-          <SidebarItem
-            icon={<LuChevronsRight className="w-5 h-5" />}
-            label="Link name"
-          />
           <SidebarItem icon={<LuPower className="w-5 h-5" />} label="Logout" />
         </div>
       </div>
 
       <div
-        className={`absolute top-0 left-14 flex items-center justify-center p-2 h-full duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] transform  bg-white border-r border-gray-200  w-52 overflow-hidden ${
+        className={`absolute top-0 left-14 flex items-center justify-center p-2 h-full duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] transform  bg-white border-r border-gray-200 w-60 overflow-hidden ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -208,10 +204,10 @@ const SidebarSubItem = ({ icon, label, to, submenus, color }) => {
     <div className="p-1">
       <div
         onClick={toggleSubmenu}
-        className={`flex items-center justify-between p-2 text-white rounded  
+        className={`flex items-center justify-between p-2  rounded  
           hover:bg-slate-100 hover:text-slate-900 transition-all duration-200 ease-in-out
            hover:shadow-sm
-          cursor-pointer group ${color === "dark" ? "text-slate-600 hover:bg-slate-200" : ""}`}
+          cursor-pointer group ${color === "dark" ? "text-slate-600 hover:bg-slate-200" : "text-white"}`}
       >
         <div className="flex items-center transition-all duration-200 ease-in-out group-hover:translate-x-1">
           {icon && <span className="mr-2">{icon}</span>}
@@ -237,7 +233,7 @@ const SidebarSubItem = ({ icon, label, to, submenus, color }) => {
       </div>
       {submenus && (
         <div
-          className={`ml-4 overflow-hidden transition-all duration-300 ease-in-out
+          className={`ml-3  overflow-hidden transition-all duration-300 ease-in-out
             ${
               isOpen
                 ? "max-h-[1000px] opacity-100 translate-y-0"

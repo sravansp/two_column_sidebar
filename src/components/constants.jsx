@@ -25,7 +25,10 @@ import {
   LuShieldCheck,
   // LuEdit,
   LuUserCog,
-  LuUserCheck
+  LuUserCheck,
+  LuPen,
+  LuCircleHelp,
+  LuLifeBuoy
 } from "react-icons/lu";
 
 export const sidebar = [
@@ -72,7 +75,7 @@ export const sidebar = [
   },
   {
     title: "Users",
-    icon: <LuStar className="w-5 h-5" />,
+    icon: <LuUsers className="w-5 h-5" />,
     submenus: [
       { title: "User List", path: "/users/list", icon: <LuUsers className="w-4 h-4" /> },
       {
@@ -80,7 +83,7 @@ export const sidebar = [
         icon: <LuShield className="w-4 h-4" />,
         submenus: [
           { title: "Admin", path: "/users/roles/admin", icon: <LuShieldCheck className="w-4 h-4" /> },
-          // { title: "Editor", path: "/users/roles/editor", icon: <LuEdit className="w-4 h-4" /> },
+          { title: "Editor", path: "/users/roles/editor", icon: <LuPen className="w-4 h-4" /> },
           {
             title: "Custom Roles",
             icon: <LuUserCog className="w-4 h-4" />,
@@ -95,7 +98,7 @@ export const sidebar = [
   },
   {
     title: "Settings",
-    icon: <LuLayoutDashboard className="w-5 h-5" />,
+    icon: <LuSettings className="w-5 h-5" />,
     submenus: [
       { title: "Profile", path: "/settings/profile", icon: <LuUser className="w-4 h-4" /> },
       { title: "Security", path: "/settings/security", icon: <LuLock className="w-4 h-4" /> },
@@ -111,9 +114,9 @@ export const sidebar = [
   },
   {
     title: "Support",
-    icon: <LuCompass className="w-5 h-5" />,
+    icon: <LuLifeBuoy className="w-5 h-5" />,
     submenus: [
-      // { title: "FAQs", path: "/support/faqs", icon: <LuHelpCircle className="w-4 h-4" /> },
+      { title: "FAQs", path: "/support/faqs", icon: <LuCircleHelp className="w-4 h-4" /> },
       { title: "Contact Us", path: "/support/contact", icon: <LuMailQuestion className="w-4 h-4" /> },
       {
         title: "Tickets",
